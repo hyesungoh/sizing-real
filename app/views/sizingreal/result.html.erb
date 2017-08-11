@@ -1,23 +1,20 @@
-<h1>결과 뷰</h1>
-<p>Find me in app/views/sizingreal/result.html.erb</p>
-<p> <a href="/sizingreal/input"> 입력 뷰로 이동 </a></p>
-
 <%
 @StartXpos = 30
 @StartYpos = 1
 
 @Heap_left = -28
 
-@length = 217
+@length = 217 * @diff_length
 
-@waist_height = 72
-@waist_width = 22
+@waist_height = 72 * @diff_length
+@waist_width = 30 * @diff_waist
 
-@tail = 45
+@tail = 45 * @diff_tail
 
-@thigh = 3
+@thigh = 3 * @diff_thigh
 
-@rise = 180
+@rise = 180 * @diff_length
+# 값이 오를 때 y 좌표가 올라감
 %>
 <!--
 heap 엉덩이
@@ -33,7 +30,28 @@ rise 밑위
 tail 밑단
 -->
 
-<svg width="640" height="500">
+<style>
+  .back_img
+  {
+    position: relative;
+  }
+
+  .svg_pants
+  {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 203px;
+  }
+</style>
+<h1>결과 뷰</h1>
+<p>Find me in app/views/sizingreal/result.html.erb</p>
+<p> <a href="/sizingreal/input"> 입력 뷰로 이동 </a></p>
+
+<div class="back_img">
+<img src="/assets/size_low.png">
+</div>
+
+<svg width="547" height="349" class="svg_pants">
  <g>
   <path stroke="black"
     d="m<%=@StartXpos%>,

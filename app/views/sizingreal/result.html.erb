@@ -2,9 +2,52 @@
 <p>Find me in app/views/sizingreal/result.html.erb</p>
 <p> <a href="/sizingreal/input"> 입력 뷰로 이동 </a></p>
 
-<svg width="1000px" height="1000px">
-  <path fill="#000000" stroke="#000000" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null"
-   d="m220,209l108,-2l6,28c1.66699,14.66701 3.33301,31.33301 5,46c3.66699,56.66699 7.33301,111.33301 11,168c-11.66699,1.66699 -23.33301,3.33301 -35,5c-8.33301,-58.66699 -21.66699,-117.33301 -29,-175c-7.33301,-57.66701 -4.66699,-25 -9,-37c-3.33301,14 -6.66699,28 -10,42c-7.66699,55.33301 -15.33299,110.66699 -23,166l-35,-1c2,-56.33301 2,-112.66699 6,-169l5,-71z" id="svg_6"/>
+<%
+@StartXpos = 30
+@StartYpos = 1
+
+@Heap_left = -28
+
+@length = 217
+
+@waist_height = 72
+@waist_width = 22
+
+@tail = 45
+
+@thigh = 3
+
+@rise = 180
+%>
+<!--
+heap 엉덩이
+
+length 총장
+
+waist 허리
+
+thigh 허벅지
+
+rise 밑위
+
+tail 밑단
+-->
+
+<svg width="640" height="500">
+ <g>
+  <path stroke="black"
+    d="m<%=@StartXpos%>,
+    <%=@StartYpos%>l<%=@Heap_left%>,
+    <%=@waist_height%>l<%=@thigh%>,
+    <%=@length%>l<%=@tail%>,
+    0l<%=@waist_width%>,
+    -<%=@rise%>l<%=@waist_width%>,
+    <%=@rise%>l<%=@tail%>,
+    0l<%=@thigh%>,
+    -<%=@length%>l-<%=@StartXpos%>,
+    -<%=@waist_height%>"
+    stroke-width="5" fill="yellow"/>
+ </g>
 </svg>
 
 <% @hash_jean_size.each do |k, v| %>
@@ -14,3 +57,11 @@
 <% @hash_my_size.each do |k, v| %>
   <p> <%=k%> = <%=v%> </p>
 <% end %>
+
+<p><%= @diff_length %></p>
+<p><%= @diff_waist %></p>
+<p><%= @diff_thigh %></p>
+<p><%= @diff_rise %></p>
+<p><%= @diff_tail %></p>
+
+<!-- 각 차이 값을 이용하여 비교하고 path에 적용하는 작업 해야 함-->

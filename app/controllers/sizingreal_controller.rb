@@ -12,6 +12,14 @@ class SizingrealController < ApplicationController
     "thigh" => params[:thigh],
     "rise" => params[:rise],
     "tail" => params[:tail]}
+
+    @hash_my_size = Hash.new
+    @hash_my_size = {"m_length" => params[:m_length],
+    "m_waist" => params[:m_waist],
+    "m_thigh" => params[:m_thigh],
+    "m_rise" => params[:m_rise],
+    "m_tail" => params[:m_tail]}
+
   end
 
   def mypage

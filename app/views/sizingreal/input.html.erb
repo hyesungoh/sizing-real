@@ -2,8 +2,17 @@
 <p>Find me in app/views/sizingreal/input.html.erb</p>
 <p> <a href="/sizingreal/mypage"> 내 정보 뷰로 이동 </a> </p>
 
-
 <form action="/sizingreal/result" method="get">
+  <h3>내 사이즈</h3>
+  <!-- 로그인 돼 있으면 자동으로 넣기 해야 함 -->
+  <!-- 디바이스 잼의 모델을 수정해서 or 따로 모델을 만들고 디바이스 모델과 연결-->
+  총장 : <input type="number" name="m_length">
+  허리 : <input type="number" name="m_waist">
+  허벅지 : <input type="number" name="m_thigh">
+  밑위 : <input type="number" name="m_rise">
+  밑단 : <input type="number" name="m_tail">
+
+  <h3>바지 사이즈</h3>
   총장 : <input type="number" name="length">
   허리 : <input type="number" name="waist">
   허벅지 : <input type="number" name="thigh">

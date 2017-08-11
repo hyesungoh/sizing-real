@@ -1,0 +1,11 @@
+<h1>결과 뷰</h1>
+<p>Find me in app/views/sizingreal/result.html.erb</p>
+<p> <a href="/sizingreal/input"> 입력 뷰로 이동 </a></p>
+
+<% @hash_jean_size.each do |k, v| %>
+  <p> <%=k%> = <%=v%></p>
+<% end %>
+
+<svg width="1000px" height="1000px">
+  <path fill="#000000" stroke="#000000" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m220,209l108,-2l6,28c1.66699,14.66701 3.33301,31.33301 5,46c3.66699,56.66699 7.33301,111.33301 11,168c-11.66699,1.66699 -23.33301,3.33301 -35,5c-8.33301,-58.66699 -21.66699,-117.33301 -29,-175c-7.33301,-57.66701 -4.66699,-25 -9,-37c-3.33301,14 -6.66699,28 -10,42c-7.66699,55.33301 -15.33299,110.66699 -23,166l-35,-1c2,-56.33301 2,-112.66699 6,-169l5,-71z" id="svg_6"/>
+</svg>

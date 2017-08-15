@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'sizingreal/result'
 
-  get 'sizingreal/mypage'
+  get 'sizingreal/mypage/:user_id' => 'sizingreal#mypage'
+  
+  post 'sizingreal/update/:user_id' => 'sizingreal#update'
 
 end

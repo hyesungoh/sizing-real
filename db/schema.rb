@@ -17,6 +17,11 @@ ActiveRecord::Schema.define(version: 20170811042825) do
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
+    t.integer  "length",                 default: 0
+    t.integer  "waist",                  default: 0
+    t.integer  "thigh",                  default: 0
+    t.integer  "rise",                   default: 0
+    t.integer  "tail",                   default: 0
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"

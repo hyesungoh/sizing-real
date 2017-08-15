@@ -29,5 +29,16 @@ class SizingrealController < ApplicationController
   end
 
   def mypage
+    @user = User.find(params[:user_id])
+  end
+  def update
+    @user = User.find(params[:user_id])
+    @user.length = params[:length]
+    @user.waist = params[:waist]
+    @user.thigh = params[:thigh]
+    @user.rise = params[:rise]
+    @user.tail = params[:tail]
+    @user.save
+    redirect_to "/"
   end
 end

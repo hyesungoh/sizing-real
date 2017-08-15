@@ -1,7 +1,14 @@
-<h1>메인 뷰 #root </h1>
-<p>Find me in app/views/sizingreal/main.html.erb</p>
+<img src="/assets/sizereal.png"></img>
 <p> <a href="/sizingreal/input"> 입력 뷰로 이동 </a></p>
-<%if user_signed_in?%>
-<p> <a href="/sizingreal/mypage/<%= current_user.id%>"> 내 정보 뷰로 이동 </a> </p>
-<a href="/users/sign_out">로그아웃</a>
-<%end%>
+<center>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-warning">회원가입</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-warning">로그인</button>
+            </div>
+        </div>
+    </div>
+</center>

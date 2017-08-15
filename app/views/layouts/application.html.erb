@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Bootstrap start-->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Bootstrap end -->
+
+    <link rel="stylesheet" href="assets/stylesheet.css">
     <title>SizingReal</title>
     <%= csrf_meta_tags %>
 
@@ -9,6 +19,50 @@
   </head>
 
   <body>
-    <%= yield %>
+
+<div class="wrap">
+    <div class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="mainNav" role="navigation">
+      <div class="container">
+        <a class="navbar-brand navbar-h" href="/">사이즈 실화냐</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">회원가입</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">마이페이지</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">로그인</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="container">
+
+        <%= yield %>
+
+      </div>
+
+      <footer>
+        <center>
+        <p class="copyright text-muted footerp"> Copyright &copy; 사실, 2017</p>
+        </center>
+      </footer>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
   </body>
 </html>

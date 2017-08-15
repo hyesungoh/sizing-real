@@ -1,3 +1,15 @@
 <h1>내 정보 뷰</h1>
 <p>Find me in app/views/sizingreal/mypage.html.erb</p>
 <p><a href="/sizingreal/input"> 입력 뷰로 이동 </a></p>
+<form action="/sizingreal/update/<%= current_user.id%>" method="post">
+  <h3>내 사이즈</h3>
+  <!-- 로그인 돼 있으면 자동으로 넣기 해야 함 -->
+  <!-- 디바이스 잼의 모델을 수정해서 or 따로 모델을 만들고 디바이스 모델과 연결-->
+  총장 : <input type="number" name="length" step=".01">
+  허리 단면 : <input type="number" name="waist" step=".01">
+  허벅지 단면 : <input type="number" name="thigh" step=".01">
+  밑위 : <input type="number" name="rise" step=".01">
+  밑단 단면 : <input type="number" name="tail" step=".01">
+
+  <input type="submit" value="결과 뷰로 보내기">
+</form>

@@ -7,14 +7,14 @@
 @length = 217 * @diff_length
 
 @waist_height = 72 * @diff_length
-@waist_width = 30 * @diff_waist
+@waist_width = 32 * @diff_waist
 
 @tail = 45 * @diff_tail
 
 @thigh = 3 * @diff_thigh
 
 @rise = 180 * @diff_length
-# 값이 오를 때 y 좌표가 올라감
+# 값이 오를 때 y 좌표가 올라1
 %>
 <!--
 heap 엉덩이
@@ -39,8 +39,7 @@ tail 밑단
   .svg_pants
   {
     position: relative;
-    margin-top: 0px;
-    margin-left: 203px;
+    margin-top: -346px;
   }
 </style>
 <h1>결과 뷰</h1>
@@ -48,10 +47,10 @@ tail 밑단
 <p> <a href="/sizingreal/input"> 입력 뷰로 이동 </a></p>
 
 <div class="back_img">
-<img src="/assets/size_low.png">
+<img src="/assets/sizing_real_model.png">
 </div>
 
-<svg width="547" height="349" class="svg_pants">
+<svg width="547" height="500" class="svg_pants" margin-left: "<%=53-((@hash_jean_size["waist"].to_f)-(@hash_my_size["m_waist"].to_f))%>px">
  <g>
   <path stroke="black"
     d="m<%=@StartXpos%>,
@@ -64,7 +63,7 @@ tail 밑단
     0l<%=@thigh%>,
     -<%=@length%>l-<%=@StartXpos%>,
     -<%=@waist_height%>"
-    stroke-width="5" fill="yellow"/>
+    stroke-width="5" fill="none"/>
  </g>
 </svg>
 
